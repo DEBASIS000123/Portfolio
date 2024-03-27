@@ -5,7 +5,7 @@ import { IoIosArrowForward } from "react-icons/io";
 const Home = () => {
   return (
     <div
-      name="Home"
+      name="home"
       className=" h-screen w-full bg-gradient-to-b from-black to-gray-800"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
@@ -30,7 +30,7 @@ const Home = () => {
         </div>
         <div>
           <img
-            className="rounded-2xl mx-24 w-auto h-96 md:w-full"
+            className="rounded-2xl md:mx-24 w-auto h-96 md:w-full"
             src={heroimg}
             alt="heroimg"
           />
