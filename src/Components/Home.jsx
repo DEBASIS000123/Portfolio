@@ -10,8 +10,11 @@ const Home = () => {
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="pt-72 md:pt-24 flex flex-col justify-center items-center h-full md:items-start">
-          <h2 className="text-4xl sm:text-4xl font-bold text-white">
-            Hey There 👋
+          <h2 className="text-4xl sm:text-4xl font-bold flex text-white">
+            Hey There{"  "}
+            <span role="img" aria-label="Emoji" className="flex emoji">
+              👋🏼
+            </span>
           </h2>
           <h2 className="py-10 text-4xl sm:text-4xl font-bold text-white">
             I'M <span className="text-Primary">DEBASIS MISHRA</span>
