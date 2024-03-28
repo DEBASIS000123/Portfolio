@@ -1,0 +1,16 @@
+.emoji {
+  font-size: 3rem;
+  animation: emojiTransition 2s infinite alternate; /* Animation properties */
+}
+
+@keyframes emojiTransition {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40%{
+    transform: rotate(0deg);
+  }
+}
