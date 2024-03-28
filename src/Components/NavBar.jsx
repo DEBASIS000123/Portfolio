@@ -5,6 +5,7 @@ import { IoHomeOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
 import { MdOutlineComputer } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
+import { GoGraph } from "react-icons/go";
 
 const NavBar = () => {
   const [nav, setnav] = useState(false);
@@ -22,8 +23,8 @@ const NavBar = () => {
     },
     {
       id: 3,
-      Link: "portfolio",
-      icon: <IoHomeOutline />,
+      Link: "Projects",
+      icon: <GoGraph />,
     },
     {
       id: 4,
