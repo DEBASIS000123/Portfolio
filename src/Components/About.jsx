@@ -38,7 +38,8 @@ const About = () => {
           </div>
           <div className="md:w-1/3">
             <img
-              className="rounded-2xl md:mx-4 lg:mx-14 xl:mx-24 w-auto h-auto md:h-80 md:w-auto mt-12"
+              className="rounded-2xl md:mx-4 lg:mx-14 xl:mx-24 w-auto h-auto md:h-80 md:w-auto mt-12
+              shadow-lg shadow-Primary "
               src={dmimg}
               alt="dmimg"
             />
