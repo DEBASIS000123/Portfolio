@@ -1,48 +1,62 @@
 import React from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { FaDisplay } from "react-icons/fa6";
+import image0 from "../assets/projects/image0.png";
+import image1 from "../assets/projects/image1.png";
+import image2 from "../assets/projects/image2.png";
+import image3 from "../assets/projects/image3.png";
+import image4 from "../assets/projects/image4.png";
+import image5 from "../assets/projects/image5.png";
 
 const Project = () => {
   const projectlists = [
     {
       id: 1,
-      src: "",
+      src: image0,
       link: "",
-      title: "Chat App",
+      title: "Currency Converter",
       about:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text",
+        "It is a webpage created by html,css,javascript using some apis. It will help to convert the real time value of one currency to another.you can convert the value of money.",
     },
     {
       id: 2,
-      src: "",
+      src: image1,
       link: "",
-      title: "responsive App",
+      title: "Bootstrap Webpage",
       about:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text",
+        "Its a Responsive webpage by using only bootstrap it will responsive for all type of devices like mobile phones, laptop ,tablet etc. we can easily create a responsive app using bootstrap.",
     },
     {
       id: 3,
-      src: "",
+      src: image2,
       link: "",
-      title: "video App",
+      title: "Amazon UI",
       about:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text",
+        "It is the Userinterface of Amazob it is made by html and css and javascript. In the point of Beginer level it is the basic and important thing to do. It will help you to Boost your confidence to make Webpages.",
     },
     {
       id: 4,
-      src: "",
+      src: image3,
       link: "",
-      title: "Qrcode App",
+      title: "Travel App",
       about:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text",
+        "This is a responsive webpage in which you can book your holiday packages and travels by easy. There are so many options are avalabe by the help of this web site you can easily book the packages.",
     },
     {
       id: 5,
-      src: "",
+      src: image4,
       link: "",
-      title: "timer App",
+      title: "QR Code Generator",
       about:
-        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text",
+        "It is a Qr code generator app Which will convert your text into Qr Code , it is made by html , css and JavaScript by using Some api. By help of this you can Secure and transfer your data anywhere in form of Qr code.",
+    },
+    {
+      id: 6,
+      src: image5,
+      link: "",
+      title: "Filter Products",
+      about:
+        "This is a webpage in which you can search your favoraite products by their name and price. It is made by Html,css And javascript and using some dummy apis. By writing the content in the search box then search you will get the filtered products.",
     },
   ];
 
@@ -69,7 +83,7 @@ const Project = () => {
             >
               <div className="flex justify-center">
                 <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU"
+                  src={list.src}
                   alt=""
                   className="rounded-md duration-200 hover:scale-105 "
                 />

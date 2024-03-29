@@ -1,6 +1,8 @@
 import React from "react";
 import heroimg from "../assets/home-main.svg";
 import { IoIosArrowForward } from "react-icons/io";
+import Particle from "./Particle.jsx";
+import Type from "./Type.jsx";
 
 const Home = () => {
   return (
@@ -8,19 +10,18 @@ const Home = () => {
       name="home"
       className=" h-screen w-full bg-gradient-to-b from-black to-gray-800"
     >
+      <Particle />
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="pt-72 md:pt-24 flex flex-col justify-center items-center h-full md:items-start">
           <h2 className="text-4xl sm:text-4xl font-bold flex text-white">
             Hey There{"  "}
-            <span role="img" aria-label="Emoji" className="flex emoji">
-              👋🏼
-            </span>
+            <span className="wave">👋🏻</span>
           </h2>
           <h2 className="py-10 text-4xl sm:text-4xl font-bold text-white">
             I'M <span className="text-Primary">DEBASIS MISHRA</span>
           </h2>
           <h2 className="py-10 text-4xl sm:text-4xl font-bold text-Primary">
-            Software Developer
+            <Type />
           </h2>
           <div>
             <button className="text-white w-fit px-6 py-3 my-2 flex  items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer group font-bold">
