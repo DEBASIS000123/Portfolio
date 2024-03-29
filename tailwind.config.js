@@ -12,6 +12,9 @@ export default {
         'white': '#ffffff',
       },
     },
+    fontFamily:{
+      signature:["PlayBall"],
+    },
   },
   plugins: [],
 }

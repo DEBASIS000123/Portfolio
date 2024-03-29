@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
+
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { IoHomeOutline } from "react-icons/io5";
@@ -13,7 +15,7 @@ const NavBar = () => {
   const linkitem = [
     {
       id: 1,
-      Link: "Home",
+      Link: "home",
       icon: <IoHomeOutline />,
     },
     {
@@ -23,12 +25,12 @@ const NavBar = () => {
     },
     {
       id: 3,
-      Link: "Projects",
+      Link: "projects",
       icon: <GoGraph />,
     },
     {
       id: 4,
-      Link: "Experience",
+      Link: "experience",
       icon: <MdOutlineComputer />,
     },
     {
@@ -41,7 +43,9 @@ const NavBar = () => {
   return (
     <div className="w-full h-16 px-4 bg-navbg items-center flex justify-between fixed">
       <div>
-        <h1 className="text-5xl ml-2 text-Primary font-bold">KUNU</h1>
+        <h1 className="text-6xl ml-2 text-sky-400 font-bold font-signature">
+          D.M.
+        </h1>
       </div>
 
       <ul className="hidden md:flex">
@@ -50,7 +54,9 @@ const NavBar = () => {
             key={link.id}
             className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200  hover:text-Primary"
           >
-            {link.Link}
+            <Link to={link.Link} smooth duration={700}>
+              {link.Link}
+            </Link>
           </li>
         ))}
       </ul>
@@ -68,8 +74,14 @@ const NavBar = () => {
               key={link.id}
               className="px-4 cursor-pointer capitalize py-6 text-3xl hover:scale-105 duration-200 flex gap-x-2  hover:text-Primary"
             >
-              {link.icon}
-              {link.Link}
+              <Link
+                onClick={() => setnav(!nav)}
+                to={link.Link}
+                smooth
+                duration={700}
+              >
+                {link.Link}
+              </Link>
             </li>
           ))}
         </ul>

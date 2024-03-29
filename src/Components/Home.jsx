@@ -2,6 +2,7 @@ import React from "react";
 import heroimg from "../assets/home-main.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import Type from "./Type.jsx";
+import { Link } from "react-scroll";
 
 const Home = () => {
   return (
@@ -22,12 +23,17 @@ const Home = () => {
             <Type />
           </h2>
           <div>
-            <button className="text-white w-fit px-6 py-3 my-2 flex  items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer group font-bold">
+            <Link
+              to="about"
+              smooth
+              duration={500}
+              className="text-white w-fit px-6 py-3 my-2 flex  items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer group font-bold"
+            >
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <IoIosArrowForward size={25} />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
         <div>
