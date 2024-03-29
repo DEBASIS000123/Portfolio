@@ -1,7 +1,6 @@
 import React from "react";
 import heroimg from "../assets/home-main.svg";
 import { IoIosArrowForward } from "react-icons/io";
-import Particle from "./Particle.jsx";
 import Type from "./Type.jsx";
 
 const Home = () => {
@@ -10,7 +9,6 @@ const Home = () => {
       name="home"
       className=" h-screen w-full bg-gradient-to-b from-black to-gray-800"
     >
-      <Particle />
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="pt-72 md:pt-24 flex flex-col justify-center items-center h-full md:items-start">
           <h2 className="text-4xl sm:text-4xl font-bold flex text-white">

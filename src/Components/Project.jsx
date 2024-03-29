@@ -75,7 +75,7 @@ const Project = () => {
           </h3>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0 mt-20">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-0 sm:px-0 mt-20">
           {projectlists.map((list) => (
             <div
               key={list.id}
