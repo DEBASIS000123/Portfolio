@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppStore } from "../Store/AppstoreProvider";
 
 const Contact = () => {
+  const { lightmode } = useContext(AppStore);
+
   return (
     <div
       name="contact"
-      className="w-full h-auto pt-44 bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      className={`w-full h-auto pt-44 ${
+        lightmode
+          ? "bg-gradient-to-br from-cyan-100 to-purple-100"
+          : "bg-gradient-to-b from-black to-gray-800 p-4 text-white"
+      }`}
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8 flex flex-col items-center">
@@ -24,22 +31,38 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className={`p-2 bg-transparent border-2 rounded-md focus:outline-none ${
+                lightmode
+                  ? "text-black border-slate-400 hover:border-slate-800"
+                  : " text-white"
+              }`}
             />
             <input
               type="text"
               name="email"
               placeholder="Enter your email"
-              className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className={`my-4 p-2 bg-transparent border-2 rounded-md focus:outline-none ${
+                lightmode
+                  ? "text-black border-slate-400 hover:border-slate-800"
+                  : " text-white"
+              }`}
             />
             <textarea
               name="message"
               placeholder="Enter your message"
               rows="10"
-              className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+              className={`my-4 p-2 bg-transparent border-2 rounded-md focus:outline-none ${
+                lightmode
+                  ? "text-black border-slate-400 hover:border-slate-800"
+                  : " text-white"
+              }`}
             ></textarea>
 
-            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+            <button
+              className={` bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300 ${
+                lightmode ? "text-black font-bold" : "text-white"
+              }`}
+            >
               Let's talk
             </button>
           </form>

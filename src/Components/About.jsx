@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import dmimg from "../assets/DebasisMishra.png";
+import { AppStore } from "../Store/AppstoreProvider";
 const About = () => {
+  const { lightmode } = useContext(AppStore);
   return (
     <div
       name="about"
-      className="pt-72 md:pt-32 w-full h-auto bg-gradient-to-b from-gray-800 to-black text-gray-300"
+      className={`pt-72 md:pt-32 w-full h-auto  ${
+        lightmode
+          ? "bg-gradient-to-br from-purple-100 to-cyan-100  text-slate-700"
+          : "bg-gradient-to-b from-gray-800 to-black text-gray-300"
+      }`}
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full pb-28">
         <div className="pb-8 flex flex-col items-center">
@@ -38,7 +44,7 @@ const About = () => {
           </div>
           <div className="md:w-1/3">
             <img
-              className="rounded-2xl md:mx-4 lg:mx-14 xl:mx-24 w-auto h-auto md:h-80 md:w-auto mt-12
+              className="rounded-2xl md:mx-4 lg:mx-14 xl:mx-24 w-auto h-auto md:h-80 md:w-auto mt-10
               shadow-lg shadow-Primary "
               src={dmimg}
               alt="dmimg"

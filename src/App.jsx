@@ -6,10 +6,11 @@ import Home from "./Components/Home";
 import NavBar from "./Components/NavBar";
 import Project from "./Components/Project";
 import SocialLinks from "./Components/SocialLinks";
+import AppstoreProvider from "./Store/AppstoreProvider";
 
 function App() {
   return (
-    <>
+    <AppstoreProvider>
       <NavBar />
       <Home />
       <About />
@@ -17,7 +18,7 @@ function App() {
       <Experience />
       <Contact />
       <SocialLinks />
-    </>
+    </AppstoreProvider>
   );
 }
 

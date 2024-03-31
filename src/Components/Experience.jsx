@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import html from "../assets/Experience/html.png";
 import css from "../assets/Experience/css.png";
 import js from "../assets/Experience/javascript.png";
@@ -11,8 +11,11 @@ import git from "../assets/Experience/Git.png";
 import github from "../assets/Experience/github.png";
 import mysql from "../assets/Experience/MySql.png";
 import springboot from "../assets/Experience/SpringBoot.png";
+import { AppStore } from "../Store/AppstoreProvider";
 
 const Experience = () => {
+  const { lightmode } = useContext(AppStore);
+
   const languages = [
     {
       id: 1,
@@ -90,9 +93,13 @@ const Experience = () => {
   return (
     <div
       name="experience"
-      className="bg-gradient-to-b  from-gray-800 to-black w-full h-auto pt-40"
+      className={` w-full h-auto pt-40 pb-20 ${
+        lightmode
+          ? "bg-gradient-to-br from-purple-100 to-cyan-100"
+          : "bg-gradient-to-b  from-gray-800 to-black  text-white"
+      }`}
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8 flex flex-col items-center">
           <h1 className="text-4xl font-bold inline ">
             Professional <span className="text-Primary">Skillset</span>
@@ -110,7 +117,7 @@ const Experience = () => {
                 alt={language.title}
                 className="w-20 mx-auto"
               />
-              <p className="mt-4">{language.title}</p>
+              <p className="mt-4 font-bold">{language.title}</p>
             </div>
           ))}
         </div>

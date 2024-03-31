@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { FaDisplay } from "react-icons/fa6";
 import image0 from "../assets/projects/image0.png";
@@ -7,8 +7,10 @@ import image2 from "../assets/projects/image2.png";
 import image3 from "../assets/projects/image3.png";
 import image4 from "../assets/projects/image4.png";
 import image5 from "../assets/projects/image5.png";
+import { AppStore } from "../Store/AppstoreProvider";
 
 const Project = () => {
+  const { lightmode } = useContext(AppStore);
   const projectlists = [
     {
       id: 1,
@@ -63,9 +65,13 @@ const Project = () => {
   return (
     <div
       name="projects"
-      className=" md:h-auto w-full bg-gradient-to-b from-black to-gray-800 pt-20"
+      className={`md:h-auto w-full  pt-20 pb-36 ${
+        lightmode
+          ? "bg-gradient-to-br from-cyan-100 to-purple-100"
+          : "bg-gradient-to-b from-black to-gray-800  text-white"
+      }`}
     >
-      <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center h-full px-4 text-white">
+      <div className="max-w-screen-lg mx-auto flex flex-col justify-center items-center h-full px-4">
         <div className="pb-8 flex flex-col items-center">
           <h1 className="text-4xl font-bold inline ">
             My Recent<span className="text-Primary"> Works</span>
