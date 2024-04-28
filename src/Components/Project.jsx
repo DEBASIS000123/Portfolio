@@ -65,7 +65,7 @@ const Project = () => {
   return (
     <div
       name="projects"
-      className={`md:h-auto w-full  pt-20 pb-36 ${
+      className={`md:h-auto w-full  pt-32 pb-36 ${
         lightmode
           ? "bg-gradient-to-br from-cyan-100 to-purple-100"
           : "bg-gradient-to-b from-black to-gray-800  text-white"
@@ -76,7 +76,7 @@ const Project = () => {
           <h1 className="text-4xl font-bold inline ">
             My Recent<span className="text-Primary"> Works</span>
           </h1>
-          <h3 className="py-2">
+          <h3 className="py-2 text-center">
             Here are few projects I've worked on recently.
           </h3>
         </div>

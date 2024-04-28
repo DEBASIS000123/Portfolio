@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className={`pt-72 md:pt-32 w-full h-auto  ${
+      className={`pt-32 md:pt-32 w-full h-auto  ${
         lightmode
           ? "bg-gradient-to-br from-purple-100 to-cyan-100  text-slate-700"
           : "bg-gradient-to-b from-gray-800 to-black text-gray-300"

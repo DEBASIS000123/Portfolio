@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div
       name="home"
-      className={`h-screen w-full 
+      className={`h-auto w-full md:pt-32 pb-32
          ${
            lightmode
              ? "bg-gradient-to-br from-cyan-100 to-purple-100"
@@ -18,7 +18,7 @@ const Home = () => {
          }`}
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="pt-72 md:pt-24 flex flex-col justify-center items-center h-full md:items-start">
+        <div className="pt-44 md:pt-24 flex flex-col justify-center items-center h-full md:items-start">
           <h1
             className={`text-4xl font-bold flex  ${
               lightmode ? "text-black sm:text-4xl " : "text-white sm:text-4xl "
@@ -30,7 +30,7 @@ const Home = () => {
             </span>
           </h1>
           <h2
-            className={`py-10 text-4xl sm:text-4xl font-bold  ${
+            className={`py-10 text-4xl sm:text-4xl font-bold text-center ${
               lightmode ? "text-black" : "text-white"
             }`}
           >
