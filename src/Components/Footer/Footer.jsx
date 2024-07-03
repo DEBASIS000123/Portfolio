@@ -113,7 +113,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-gray-400 mb-10 text-center">
-        &copy; 2024 Your Company Name. All rights reserved.
+        Copyright &copy; 2024 DEBASIS MISHRA
+        <br />
+        All rights reserved.
       </div>
     </div>
   );
