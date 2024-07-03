@@ -73,7 +73,7 @@ const Home = () => {
           >
             Brief <p className="text-Primary ml-4">Introduction</p>
           </h1>
-          <div className={`mt-6 ${lightmode ? "text-black  " : "text-white "}`}>
+          <div className={`mt-8 ${lightmode ? "text-black  " : "text-white "}`}>
             <p className="text-sm md:text-lg mt-10 m-10">
               I love the process of changing a raw idea into a website or a
               product that impacts lives. I want to do work that challenges me
