@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import dmimg from "../assets/DebasisMishra.png";
+import dmimg from "../assets/Dm.png";
 import { AppStore } from "../Store/AppstoreProvider";
 const About = () => {
   const { lightmode } = useContext(AppStore);
@@ -45,7 +45,7 @@ const About = () => {
           <div className="md:w-1/3">
             <img
               className="rounded-2xl md:mx-4 lg:mx-14 xl:mx-24 w-auto h-auto md:h-80 md:w-auto mt-10
-              shadow-lg shadow-Primary "
+              shadow-md shadow-red-600 "
               src={dmimg}
               alt="dmimg"
             />
