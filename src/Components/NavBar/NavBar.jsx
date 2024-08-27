@@ -56,14 +56,18 @@ const NavBar = () => {
         {linkitem.map((link) => (
           <li
             key={link.id}
-            className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200  hover:text-Primary"
+            className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200 "
           >
             <NavLink
               to={`/${link.Link}`}
               smooth
               duration={700}
               className={({ isActive }) =>
-                `${isActive ? "text-Primary" : "text-white"}`
+                `${
+                  isActive
+                    ? "text-Primary"
+                    : "text-white  hover:text-fuchsia-200"
+                }`
               }
             >
               {link.Link}
