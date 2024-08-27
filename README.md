@@ -2,6 +2,14 @@
 
 <br/>
 
+---
+
+# Pictures
+
+|  ![Image 1](https://github.com/DEBASIS000123/Portfolio/blob/main/src/photos/home.jpg)   | ![Image 2](https://github.com/DEBASIS000123/Portfolio/blob/main/src/photos/about.jpg) |
+| :-------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------: |
+| ![Image 3](https://github.com/DEBASIS000123/Portfolio/blob/main/src/photos/project.jpg) | ![Image 4](https://github.com/DEBASIS000123/Portfolio/blob/main/src/photos/skill.jpg) |
+
 ## Fork
 
 <p>Feel free to fork this repo to modify and make changes of your own. Please give me proper credit by linking it back to this repo. Thanks! 
