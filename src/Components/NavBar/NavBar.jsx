@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import style from "./NavBar.module.css";
 
@@ -15,6 +15,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   const { lightmode, setlightmode } = useContext(AppStore);
   const [nav, setnav] = useState(false);
+  const navRef = useRef(null);
 
   const linkitem = [
     {
@@ -44,6 +45,24 @@ const NavBar = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setnav(false); // Close the mobile menu
+      }
+    };
+
+    if (nav) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [nav]);
+
   return (
     <div className="w-full h-16 px-4 bg-navbg items-center flex justify-between fixed">
       <div>
@@ -52,11 +71,12 @@ const NavBar = () => {
         </h1>
       </div>
 
-      <ul className="hidden md:flex items-center ">
+      {/* Desktop Links */}
+      <ul className="hidden md:flex items-center">
         {linkitem.map((link) => (
           <li
             key={link.id}
-            className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200 "
+            className="px-4 cursor-pointer capitalize font-medium text-white hover:scale-105 duration-200"
           >
             <NavLink
               to={`/${link.Link}`}
@@ -74,6 +94,7 @@ const NavBar = () => {
             </NavLink>
           </li>
         ))}
+        {/* Day/Night Mode Toggle for Desktop */}
         <li className="ml-10">
           <label className={style["switch"]}>
             <span className={style["moon"]}>
@@ -100,6 +121,8 @@ const NavBar = () => {
           </label>
         </li>
       </ul>
+
+      {/* Hamburger Icon for Mobile Menu */}
       <div
         onClick={() => setnav(!nav)}
         className="cursor-pointer pr-4 z-10 text-Primary md:hidden"
@@ -107,12 +130,22 @@ const NavBar = () => {
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
+      {/* Mobile Menu */}
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-fit bg-gradient-to-b from-black to-gray-800 text-white md:hidden ">
+        <ul
+          ref={navRef}
+          className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-fit bg-gradient-to-b from-black to-gray-800 text-white md:hidden"
+        >
+          <div>
+            <h1 className="text-5xl text-sky-400 font-bold font-signature mt-4 mb-8">
+              DM
+            </h1>
+          </div>
+
           {linkitem.map((link) => (
             <li
               key={link.id}
-              className="px-4 cursor-pointer capitalize py-6 text-2xl hover:scale-105 duration-200 flex gap-x-2  hover:text-Primary"
+              className="px-4 cursor-pointer capitalize py-4 text-2xl hover:scale-105 duration-200 flex gap-x-2 hover:text-Primary"
             >
               <NavLink
                 to={`/${link.Link}`}
@@ -121,12 +154,15 @@ const NavBar = () => {
                 className={({ isActive }) =>
                   `${isActive ? "text-Primary" : "text-white"}`
                 }
+                onClick={() => setnav(false)} // Close menu after link click
               >
                 {link.Link}
               </NavLink>
             </li>
           ))}
-          <li className="mt-10 pb-10">
+
+          {/* Day/Night Mode Toggle for Mobile */}
+          <li className="my-4">
             <label className={style["switch"]}>
               <span className={style["moon"]}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
