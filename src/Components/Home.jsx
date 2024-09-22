@@ -22,15 +22,16 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="pt-44 md:pt-24 flex flex-col justify-center items-center h-full md:items-start">
           <h1
-            className={`text-4xl font-bold flex  ${
+            className={`text-4xl font-bold flex ${
               lightmode ? "text-black sm:text-4xl " : "text-white sm:text-4xl "
-            }`}
+            } z-10 relative`} // Add relative and z-10 here
           >
             Hey There{"  "}
             <span className="wave" role="img" aria-label="Emoji">
               👋🏻
             </span>
           </h1>
+
           <h2
             className={`py-10 text-4xl sm:text-4xl font-bold text-center ${
               lightmode ? "text-black" : "text-white"

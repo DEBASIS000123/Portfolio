@@ -64,7 +64,7 @@ const NavBar = () => {
   }, [nav]);
 
   return (
-    <div className="w-full h-16 px-4 bg-navbg items-center flex justify-between fixed">
+    <div className="w-full h-16 px-4 bg-navbg items-center flex justify-between fixed z-50">
       <div>
         <h1 className="text-6xl ml-2 text-sky-400 font-bold font-signature">
           DM
