@@ -11,6 +11,8 @@ import git from "../assets/Experience/Git.png";
 import github from "../assets/Experience/github.png";
 import mysql from "../assets/Experience/MySql.png";
 import springboot from "../assets/Experience/SpringBoot.png";
+import C from "../assets/Experience/c.png";
+import Cplus from "../assets/Experience/cplus.png";
 import { AppStore } from "../Store/AppstoreProvider";
 
 const Experience = () => {
@@ -81,7 +83,7 @@ const Experience = () => {
       id: 11,
       src: mysql,
       title: "My SQL",
-      style: "shadow-cyan-400",
+      style: "shadow-cyan-700",
     },
     {
       id: 12,
@@ -89,13 +91,25 @@ const Experience = () => {
       title: "SpringBoot",
       style: "shadow-green-500",
     },
+    {
+      id: 13,
+      src: C,
+      title: "C",
+      style: "shadow-indigo-600",
+    },
+    {
+      id: 14,
+      src: Cplus,
+      title: "C++",
+      style: "shadow-sky-500",
+    },
   ];
   return (
     <div
       name="experience"
       className={` w-full h-auto pt-40 pb-20 ${
         lightmode
-          ? "bg-gradient-to-br from-purple-100 to-cyan-100"
+          ? "bg-gradient-to-br from-purple-100 to-cyan-100 "
           : "bg-gradient-to-b  from-gray-800 to-black  text-white"
       }`}
     >

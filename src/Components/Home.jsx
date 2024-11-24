@@ -49,7 +49,7 @@ const Home = () => {
               duration={500}
               className={`text-white w-fit px-6 py-3 my-2 flex  items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer group font-bold `}
             >
-              Portfolio
+              Read more..
               <span className="group-hover:rotate-90 duration-300">
                 <IoIosArrowForward size={25} />
               </span>
@@ -83,8 +83,7 @@ const Home = () => {
               <br />I am fluent in <b className="text-Primary">Java</b> and know
               a bit of <b className="text-Primary">Python</b> and am working on
               a few projects in the <b className="text-Primary">SpringBoot</b>.
-              <br />I plan to learn <b className="text-Primary">C</b>,{" "}
-              <b className="text-Primary">C++</b> and
+              <br />I plan to learn <b className="text-Primary">C++</b> and
               <b className="text-Primary"> Typescript</b> in the near future.{" "}
               <br />
               <br />

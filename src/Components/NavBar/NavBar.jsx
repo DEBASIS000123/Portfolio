@@ -4,6 +4,7 @@ import style from "./NavBar.module.css";
 
 import { FaBars } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
+import { IoMenu } from "react-icons/io5";
 import { IoHomeOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
 import { MdOutlineComputer } from "react-icons/md";
@@ -14,6 +15,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const { lightmode, setlightmode } = useContext(AppStore);
+  const [showPopup, setShowPopup] = useState(false);
   const [nav, setnav] = useState(false);
   const navRef = useRef(null);
 
@@ -44,6 +46,13 @@ const NavBar = () => {
       icon: <FiPhone />,
     },
   ];
+  useEffect(() => {
+    // Show popup when the page loads
+    setShowPopup(true);
+    const timer = setTimeout(() => setShowPopup(false), 3000); // Close after 3 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -84,9 +93,10 @@ const NavBar = () => {
               duration={700}
               className={({ isActive }) =>
                 `${
-                  isActive
-                    ? "text-Primary"
-                    : "text-white  hover:text-fuchsia-200"
+                  isActive ||
+                  (link.Link === "home" && location.pathname === "/")
+                    ? "text-Primary font-bold underline"
+                    : "text-white hover:text-fuchsia-200"
                 }`
               }
             >
@@ -129,7 +139,25 @@ const NavBar = () => {
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
-
+      {/* Popup on page load for mobile menu */}
+      {showPopup && (
+        <div
+          className={`flex flex-row md:hidden absolute top-16 right-2 p-3 rounded-md shadow-md transition-opacity duration-500 ${
+            lightmode ? "bg-gray-100 text-black" : "bg-gray-800 text-white"
+          } flex items-center gap-2`}
+          style={{ zIndex: 60, opacity: showPopup ? 1 : 0 }}
+        >
+          <p className="text-sm flex items-center gap-1">
+            Click <IoMenu className="h-5 w-5" /> for more options.
+          </p>
+          <button
+            onClick={() => setShowPopup(false)}
+            className="text-lg font-bold"
+          >
+            &times;
+          </button>
+        </div>
+      )}
       {/* Mobile Menu */}
       {nav && (
         <ul

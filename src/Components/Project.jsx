@@ -3,7 +3,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaDisplay } from "react-icons/fa6";
 import image0 from "../assets/projects/image0.png";
 import image1 from "../assets/projects/image1.png";
-import image2 from "../assets/projects/image2.png";
+import image2 from "../assets/projects/image2.webp";
 import image3 from "../assets/projects/image3.png";
 import image4 from "../assets/projects/image4.png";
 import image5 from "../assets/projects/image5.png";
@@ -15,39 +15,44 @@ const Project = () => {
     {
       id: 1,
       src: image0,
-      link: "",
-      title: "Currency Converter",
+      code: "https://github.com/DEBASIS000123/Optimal-Network-Planner",
+      demo: "https://github.com/DEBASIS000123/Optimal-Network-Planner",
+      title: "Optimal Coverage Path",
       about:
-        "It is a webpage created by html,css,javascript using some apis. It will help to convert the real time value of one currency to another.you can convert the value of money.",
+        "Optimal Network Planner is a tool for optimizing wireless network coverage using clustering and path planning algorithms.By analyzing signal strength data, it identifies key nodes that maximize network coverage and determines the shortest path to cover these areas efficiently.",
     },
     {
       id: 2,
       src: image1,
-      link: "",
-      title: "Bootstrap Webpage",
+      code: "https://github.com/DEBASIS000123/Luminex",
+      demo: "https://github.com/DEBASIS000123/Luminex",
+      title: "Luminex",
       about:
-        "Its a Responsive webpage by using only bootstrap it will responsive for all type of devices like mobile phones, laptop ,tablet etc. we can easily create a responsive app using bootstrap.",
+        "Luminex is a stylish contact management app built with Spring Boot and Tailwind CSS. Users can upload contacts, add photos, and store details securely in the cloud. With seamless GitHub and Google login options, Luminex offers an intuitive, responsive interface for managing profiles.",
     },
     {
       id: 3,
       src: image2,
-      link: "",
-      title: "Amazon UI",
+      code: "https://github.com/DEBASIS000123/Restaurant-Review-predictor",
+      demo: "https://github.com/DEBASIS000123/Restaurant-Review-predictor",
+      title: "Restaurant Review Predictor",
       about:
-        "It is the Userinterface of Amazob it is made by html and css and javascript. In the point of Beginer level it is the basic and important thing to do. It will help you to Boost your confidence to make Webpages.",
+        "The Restaurant Review Predictor is a machine learning project that classifies restaurant reviews as positive or negative. Using Natural Language Processing (NLP) techniques.",
     },
     {
       id: 4,
       src: image3,
-      link: "",
-      title: "Travel App",
+      code: "https://github.com/DEBASIS000123/Lagunitas-",
+      demo: "https://lagunitasbeer.netlify.app/",
+      title: "Lagunitas Webpage",
       about:
-        "This is a responsive webpage in which you can book your holiday packages and travels by easy. There are so many options are avalabe by the help of this web site you can easily book the packages.",
+        "This is a Lagunitas webpage using Html Css and Javascript. Is is modern stylish webpage for Desktop.There are Dynamic Effects are Added.Whether you're enjoying a cold pint at a backyard barbecue or sharing a few laughs with friends at a local pub.",
     },
     {
       id: 5,
       src: image4,
-      link: "",
+      code: "",
+      demo: "",
       title: "QR Code Generator",
       about:
         "It is a Qr code generator app Which will convert your text into Qr Code , it is made by html , css and JavaScript by using Some api. By help of this you can Secure and transfer your data anywhere in form of Qr code.",
@@ -55,7 +60,8 @@ const Project = () => {
     {
       id: 6,
       src: image5,
-      link: "",
+      code: "",
+      demo: "",
       title: "Filter Products",
       about:
         "This is a webpage in which you can search your favoraite products by their name and price. It is made by Html,css And javascript and using some dummy apis. By writing the content in the search box then search you will get the filtered products.",
@@ -90,7 +96,7 @@ const Project = () => {
               <div className="flex justify-center">
                 <img
                   src={list.src}
-                  alt=""
+                  alt="preview"
                   className="rounded-md duration-200 hover:scale-105 "
                 />
               </div>
@@ -101,18 +107,22 @@ const Project = () => {
                 <p className=" mt-4 text-justify">{list.about}</p>
               </div>
               <div className="flex items-center justify-center mt-5">
-                <button
+                <a
+                  target="_blank"
                   className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105
                 bg-fuchsia-400 hover:bg-cyan-500 text-white font-bold rounded  cursor-pointer  flex flex-row gap-1"
+                  href={list.code}
                 >
                   <IoLogoGithub size={22} /> Code
-                </button>
-                <button
+                </a>
+                <a
+                  target="_blank"
                   className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105
                text-white font-bold rounded bg-fuchsia-400 hover:bg-cyan-500 cursor-pointer flex flex-row  gap-1"
+                  href={list.demo}
                 >
                   <FaDisplay className="pt-1" size={20} /> Demo
-                </button>
+                </a>
               </div>
             </div>
           ))}
