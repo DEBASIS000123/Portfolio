@@ -4,9 +4,9 @@ import { FaDisplay } from "react-icons/fa6";
 import image0 from "../assets/projects/image0.png";
 import image1 from "../assets/projects/image1.png";
 import image2 from "../assets/projects/image2.webp";
-import image3 from "../assets/projects/image3.png";
+import image3 from "../assets/projects/image3.jpg";
 import image4 from "../assets/projects/image4.png";
-import image5 from "../assets/projects/image5.png";
+import image6 from "../assets/projects/image6.png";
 import { AppStore } from "../Store/AppstoreProvider";
 
 const Project = () => {
@@ -42,29 +42,29 @@ const Project = () => {
     {
       id: 4,
       src: image3,
+      code: "https://github.com/DEBASIS000123/ChatBot",
+      demo: "",
+      title: "AI ChatBot",
+      about:
+        "This chatbot project is built using React JS for the frontend and Google Gemini API for advanced natural language processing. It delivers human conversational experiences with a sleek, responsive UI and seamless real-time communication.",
+    },
+    {
+      id: 5,
+      src: image6,
+      code: "https://github.com/DEBASIS000123/Memory-Matching-Game",
+      demo: "https://app.netlify.com/sites/vermillion-macaron-04a34f/deploys/67a0fda140f90f1e0a91494a",
+      title: "Memory Matching Game",
+      about:
+        "This is a simple memory matching game which is created by HTML,CSS,Javascript. Which provides an interface to the user to match the icons by pairs. It shows the no of moves and time taken to complete the match.",
+    },
+    {
+      id: 6,
+      src: image4,
       code: "https://github.com/DEBASIS000123/Lagunitas-",
       demo: "https://lagunitasbeer.netlify.app/",
       title: "Lagunitas Webpage",
       about:
         "This is a Lagunitas webpage using Html Css and Javascript. Is is modern stylish webpage for Desktop.There are Dynamic Effects are Added.Whether you're enjoying a cold pint at a backyard barbecue or sharing a few laughs with friends at a local pub.",
-    },
-    {
-      id: 5,
-      src: image4,
-      code: "",
-      demo: "",
-      title: "QR Code Generator",
-      about:
-        "It is a Qr code generator app Which will convert your text into Qr Code , it is made by html , css and JavaScript by using Some api. By help of this you can Secure and transfer your data anywhere in form of Qr code.",
-    },
-    {
-      id: 6,
-      src: image5,
-      code: "",
-      demo: "",
-      title: "Filter Products",
-      about:
-        "This is a webpage in which you can search your favoraite products by their name and price. It is made by Html,css And javascript and using some dummy apis. By writing the content in the search box then search you will get the filtered products.",
     },
   ];
 
