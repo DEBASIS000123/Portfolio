@@ -80,11 +80,15 @@ const Home = () => {
               product that impacts lives. I want to do work that challenges me
               as a developer & work that I can be proud of.
               <br />
-              <br />I am fluent in <b className="text-Primary">Java</b> and know
-              a bit of <b className="text-Primary">Python</b> and am working on
-              a few projects in the <b className="text-Primary">SpringBoot</b>.
-              <br />I plan to learn <b className="text-Primary">C++</b> and
-              <b className="text-Primary"> Typescript</b> in the near future.{" "}
+              <br />I am fluent in{" "}
+              <b className="text-Primary">
+                Java Python C React-Js ML SQL Networking & DSA{" "}
+              </b>{" "}
+              and know a bit of <b className="text-Primary">C++</b> and am
+              working on a few projects in the{" "}
+              <b className="text-Primary">SpringBoot</b>.
+              <br />I plan to learn <b className="text-Primary">AWS</b> and
+              <b className="text-Primary"> Microservices</b> in the near future.{" "}
               <br />
               <br />
               Also, I love <b className="text-Primary">coffee</b>{" "}
