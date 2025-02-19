@@ -11,6 +11,7 @@ import git from "../assets/Experience/Git.png";
 import github from "../assets/Experience/github.png";
 import mysql from "../assets/Experience/MySql.png";
 import springboot from "../assets/Experience/SpringBoot.png";
+import postgre from "../assets/Experience/postgre.png";
 import C from "../assets/Experience/c.png";
 import Cplus from "../assets/Experience/cplus.png";
 import { AppStore } from "../Store/AppstoreProvider";
@@ -102,6 +103,12 @@ const Experience = () => {
       src: Cplus,
       title: "C++",
       style: "shadow-sky-500",
+    },
+    {
+      id: 15,
+      src: postgre,
+      title: "Postgre Sql",
+      style: "shadow-blue-400",
     },
   ];
   return (
