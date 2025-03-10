@@ -43,7 +43,7 @@ const Project = () => {
       id: 4,
       src: image3,
       code: "https://github.com/DEBASIS000123/ChatBot",
-      demo: "",
+      demo: "https://keen-salamander-5ea07e.netlify.app/",
       title: "AI ChatBot",
       about:
         "This chatbot project is built using React JS for the frontend and Google Gemini API for advanced natural language processing. It delivers human conversational experiences with a sleek, responsive UI and seamless real-time communication.",
