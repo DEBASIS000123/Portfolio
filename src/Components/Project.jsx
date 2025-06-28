@@ -18,8 +18,9 @@ const Project = () => {
       code: "https://github.com/DEBASIS000123/Optimal-Network-Planner",
       demo: "https://github.com/DEBASIS000123/Optimal-Network-Planner",
       title: "Optimal Coverage Path",
+      extraabout: "Published At (ICMIB-2025)",
       about:
-        "Optimal Network Planner is a tool for optimizing wireless network coverage using clustering and path planning algorithms.By analyzing signal strength data, it identifies key nodes that maximize network coverage and determines the shortest path to cover these areas efficiently.",
+        "It is a Machine learning algorithm to minimize the road cost at the cell tower regions by 60% and also covers all the cell towers without any human iteractions.",
     },
     {
       id: 2,
@@ -104,6 +105,10 @@ const Project = () => {
                 <h1 className="text-2xl font-bold mt-4 text-center">
                   {list.title}
                 </h1>
+
+                <h2 className="text-3xl text-red-600 font-bold mt-4 text-center">
+                  {list.extraabout}
+                </h2>
                 <p className=" mt-4 text-justify">{list.about}</p>
               </div>
               <div className="flex items-center justify-center mt-5">
